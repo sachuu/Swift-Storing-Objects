@@ -44,12 +44,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHq-TR-SuE">
-                                <rect key="frame" x="44" y="581.66666666666663" width="75" height="22.666666666666629"/>
-                                <state key="normal" title="Button" image="hand.thumbsup" catalog="system"/>
+                                <rect key="frame" x="44" y="581.66666666666663" width="75" height="23"/>
+                                <state key="normal" title="Button" image="hand.thumbsdown" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdI-5V-QfL">
                                 <rect key="frame" x="327.66666666666669" y="580.66666666666663" width="74.666666666666686" height="23"/>
-                                <state key="normal" title="Button" image="hand.thumbsdown" catalog="system"/>
+                                <state key="normal" title="Button" image="hand.thumbsup" catalog="system"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
