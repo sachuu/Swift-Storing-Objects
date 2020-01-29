@@ -15,8 +15,7 @@ var bananaImage = "images/banana"
 var strawberryImage = "images/strawberry"
 var tomatoImage = "images/tomato"
 
-
-let apple = Fruit(fruitName: "avacado", fruitImageName: avacadoImage)
+let avacado = Fruit(fruitName: "avacado", fruitImageName: avacadoImage)
 let banana = Fruit(fruitName: "banana", fruitImageName: bananaImage)
 let strawberry = Fruit(fruitName: "strawberry", fruitImageName: strawberryImage)
 let tomato = Fruit(fruitName: "tomato", fruitImageName: tomatoImage)
@@ -29,34 +28,53 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        FruitCollection(fruit: avacado)
+        FruitCollection(fruit: banana)
+        FruitCollection(fruit: strawberry)
+        FruitCollection(fruit: tomato)
     }
-    
+    //Avacado 0
+    //Banana 1
+    //Strawberry 2
+    //Tomato 3
     
     @IBAction func nextPress(_ sender: Any) {
+        let currFruit = (FruitCollection.collection[FruitCollection.current])
         FruitCollection.current += 1
         
-        if(FruitCollection.current == 0){
-            fruitView.image = UIImage(named: FruitCollection.collection[FruitCollection.current].fruitImageName)
-        }
-        if(FruitCollection.current == 1){
-             fruitView.image = UIImage(named: FruitCollection.collection[FruitCollection.current].fruitImageName)
-        }
-        if(FruitCollection.current == 2){
-             fruitView.image = UIImage(named: FruitCollection.collection[FruitCollection.current].fruitImageName)
-        }
-        if(FruitCollection.current == 3){
+        if(FruitCollection.current == 4){
             FruitCollection.current = 0
         }
+        
+        if(FruitCollection.current == 0){
+            upLabel.text = String(currFruit.likes)
+            downLabel.text = String(currFruit.dislikes)
+        }
+        
+        if(FruitCollection.current == 1){
+            upLabel.text = String(currFruit.likes)
+            downLabel.text = String(currFruit.dislikes)
+        }
+        
+        if(FruitCollection.current == 2){
+            upLabel.text = String(currFruit.likes)
+            downLabel.text = String(currFruit.dislikes)
+        }
+        
+        if(FruitCollection.current == 3){
+            upLabel.text = String(currFruit.likes)
+            downLabel.text = String(currFruit.dislikes)
+        }
+        
+        fruitView.image = UIImage(named: currFruit.fruitImageName)
+        print(FruitCollection.current)
     }
     
     @IBAction func upButtonPress(_ sender: Any) {
-        upCount += 1
-        upLabel.text = String(upCount)
+        FruitCollection.collection[FruitCollection.current].likes += 1
     }
     
     @IBAction func downButtonPress(_ sender: Any) {
-        downCount += 1
-        downLabel.text = String(downCount)
+        FruitCollection.collection[FruitCollection.current].dislikes += 1
     }
 }

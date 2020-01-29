@@ -12,9 +12,8 @@ struct FruitCollection{
     static var collection = [Fruit]()
     static var current:Int = 0
     
-    init(fruit: Fruit){
+   init(fruit: Fruit){
         FruitCollection.collection.append(fruit)
-        FruitCollection.current += 1
     }
     
     static func currentFruit() -> Fruit{
@@ -32,5 +31,3 @@ struct FruitCollection{
     
     //Other helper functions here
 }
-
-//FruitCollections
