@@ -1,6 +1,7 @@
 **Storing Data Using Objects**
 
-This project reflects a more efficient way to store data, through objects / structures
+This project reflects a more efficient way to store data, through objects / structures. It also includes local storage 
+so that the data persists within the app. 
 
 **The project consists of storing fruit objects within a structure that stores a list of objects**
 
