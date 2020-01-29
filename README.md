@@ -66,3 +66,29 @@ override func viewDidLoad() {
    FruitCollection(fruit: tomato)
 }
 ```
+**Storing Data** 
+
+**In Scene Delegate**
+```
+ func sceneDidDisconnect(_ scene: UIScene) {
+    // Called as the scene is being released by the system.
+    // This occurs shortly after the scene enters the background, or when its session is discarded.
+    // Release any resources associated with this scene that can be re-created the next time the scene connects.
+    // The scene may re-connect later, as its session was not neccessarily discarded 
+    UserDefaults.standard.set(FruitCollection.getCurrentIndex(), forKey: "currentIndex")
+    }
+```
+
+**In View Controller**
+
+```
+override func viewDidLoad() {
+   if let i = UserDefaults.standard.integer(forKey:
+      "currentIndex") as Int? {
+       print("Fruits existed with index: \(i)")
+       FruitCollection.setCurrentIndex(to: i) //restore the fruit
+      }
+      let fruit = FruitCollection.currentFruit()
+   fruitView.image = UIImage(named: fruit.fruitImageName)
+}
+```
