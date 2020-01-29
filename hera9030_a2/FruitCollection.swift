@@ -11,10 +11,24 @@ import Foundation
 struct FruitCollection{
     static var collection = [Fruit]()
     static var current:Int = 0
-    
-   init(fruit: Fruit){
-        FruitCollection.collection.append(fruit)
+
+    init(){
+        let avacadoImage = "images/avacado"
+        let bananaImage = "images/banana"
+        let strawberryImage = "images/strawberry"
+        let tomatoImage = "images/tomato"
+
+        let avacado = Fruit(fruitName: "avacado", fruitImageName: avacadoImage)
+        let banana = Fruit(fruitName: "banana", fruitImageName: bananaImage)
+        let strawberry = Fruit(fruitName: "strawberry", fruitImageName: strawberryImage)
+        let tomato = Fruit(fruitName: "tomato", fruitImageName: tomatoImage)
+        
+        FruitCollection.collection.append(avacado)
+        FruitCollection.collection.append(banana)
+        FruitCollection.collection.append(strawberry)
+        FruitCollection.collection.append(tomato)
     }
+    
     
     static func currentFruit() -> Fruit{
         let fruit = FruitCollection.collection[FruitCollection.current]
