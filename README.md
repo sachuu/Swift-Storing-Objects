@@ -6,6 +6,7 @@ This project reflects a more efficient way to store data, through objects / stru
 
 **Fruit Object:**
 
+```
 struct Fruit{
     let fruitImageName: String
     let fruitName: String
@@ -17,9 +18,11 @@ struct Fruit{
         self.fruitName = fruitName
     }
 }
+```
 
 **Structure that stores a list of objects:**
 
+```
 struct FruitCollection{
     static var collection = [Fruit]()
     static var current:Int = 0
@@ -43,9 +46,11 @@ struct FruitCollection{
     
     //Other helper functions here
 }
+```
 
 **Example of Instance:**
 
+```
 let avacado = Fruit(fruitName: "avacado", fruitImageName: avacadoImage)
 let banana = Fruit(fruitName: "banana", fruitImageName: bananaImage)
 let strawberry = Fruit(fruitName: "strawberry", fruitImageName: strawberryImage)
@@ -53,9 +58,10 @@ let tomato = Fruit(fruitName: "tomato", fruitImageName: tomatoImage)
 
 //Initializing each Fruit in the Fruit Collections ObjectList on load
 override func viewDidLoad() {
-        super.viewDidLoad()
-        FruitCollection(fruit: avacado)
-        FruitCollection(fruit: banana)
-        FruitCollection(fruit: strawberry)
-        FruitCollection(fruit: tomato)
-    }
+   super.viewDidLoad()
+   FruitCollection(fruit: avacado)
+   FruitCollection(fruit: banana)
+   FruitCollection(fruit: strawberry)
+   FruitCollection(fruit: tomato)
+}
+```
